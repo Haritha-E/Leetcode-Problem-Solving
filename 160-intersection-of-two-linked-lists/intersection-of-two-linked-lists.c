@@ -5,29 +5,11 @@
  *     struct ListNode *next;
  * };
  */
-int length(struct ListNode *l){
-    int c=0;
-    while(l!=NULL){
-        c++;
-        l=l->next;
-    }
-    return c;
-}
-
 struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
-    int l1=length(headA);
-    int l2=length(headB);
-    while(l1 > l2){
-        headA=headA->next;
-        l1--;
+    struct ListNode *th1=headA, *th2=headB;
+    while(th1!=th2){
+        th1 = th1==NULL ? headB:th1->next;
+        th2 = th2==NULL ? headA:th2->next;
     }
-    while(l2 > l1){
-        headB=headB->next;
-        l2--;
-    }
-    while(headA!=headB){
-        headA=headA->next;
-        headB=headB->next;
-    }
-    return headA;
+    return th1;
 }
