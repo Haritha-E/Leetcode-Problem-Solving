@@ -22,9 +22,8 @@ public:
         int i=c-n,j=1;
         nn=head;
         if(i==0){
-            ListNode* p=head;
-            head=p->next;
-            delete p;
+            head=nn->next;
+            delete nn;
             return head;
         }
         while(j<i){
