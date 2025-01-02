@@ -12,8 +12,6 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
             c++;
             nn=nn->next;
         }
-        if(c==1)
-            return NULL;
         int i=c-n,j=1;
         nn=head;
         if(i==0){
