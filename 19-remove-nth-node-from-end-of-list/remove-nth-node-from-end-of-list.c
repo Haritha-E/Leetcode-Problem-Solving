@@ -6,7 +6,7 @@
  * };
  */
 struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
-    int c=0;
+        int c=0;
         struct ListNode* nn=head;
         while(nn!=NULL){
             c++;
