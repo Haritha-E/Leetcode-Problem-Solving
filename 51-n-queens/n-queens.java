@@ -12,7 +12,6 @@ class Solution {
             return;
         }
         for (int col = 0; col < board.length; col++) {
-            // Place the queen if it is safe
             if (isSafe(board, row, col)) {
                 board[row][col] = true;
                 queens(board, row + 1, result);
